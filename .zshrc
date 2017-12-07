@@ -108,7 +108,7 @@ alias ssh="~/scripts/ssh_over_gpg.sh"
 
 
 #### GPG Configuration BEGIN ####
-eval $(gpg-agent --daemon)  # Silent is gold. 
+gpg-agent --daemon &> /dev/null  # Silent is gold. 
 GPG_TTY=$(tty)
 export GPG_TTY
 export SSH_AUTH_SOCK="${HOME}/.gnupg/S.gpg-agent.ssh"
